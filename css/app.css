@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+    /* Primary colors */
+    --Dark-cyan: hsl(185, 75%, 39%); /* Dark cyan */
+    --Very-dark-desaturated-blue: hsl(229, 23%, 23%); /* Very dark desaturated blue */
+    --Dark-grayish-blue: hsl(227, 10%, 46%); /* Dark grayish blue */
+    /* Neutral colors */
+    --Dark-gray: hsl(0, 0%, 59%); /* Dark-gray */
+    --Dark-gray-transparent: hsla(0, 0%, 59%, 0.5); /* Dark gray transparent*/
+    --White: hsl(0, 0%, 100%);
+}
+
+/* CSS Reset Start */
+
+* {
+    box-sizing: border-box;
+}
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, a {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+    vertical-align: baseline;
+}
+img {
+	display: block;
+}
+/* CSS Reset End */
+
+/* CSS Normalize Start */
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.4;
+    text-align: center;
+    color: var(--Very-dark-desaturated-blue);
+}
+/* Heading for name*/
+h3 {
+    font-size: clamp(1.25rem, 1.0565rem + 0.6452vw, 1.5rem);
+    font-weight: 700;
+}
+
+/* CSS Normalize End */
+
+div.component {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('https://supraweb.dev/demos/profile-card-component-main/images/bg-pattern-top.svg') left -750px top -500px, url('https://supraweb.dev/demos/profile-card-component-main/images/bg-pattern-bottom.svg') right -750px bottom -500px, var(--Dark-cyan);
+    background-repeat: no-repeat;
+}
+div.card {
+    width: 350px;
+    text-align: center;
+    background: url('https://supraweb.dev/demos/profile-card-component-main/images/bg-pattern-card.svg') left top, var(--White);
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    box-shadow: 0 2px 18px -12px var(--Very-dark-desaturated-blue);
+}
+.card-top {
+    position: relative;
+    width: 100%;
+    height: 280px;
+    border-bottom: 1px solid var(--Dark-gray-transparent);
+}
+.card-bottom {
+    width: 100%;
+    padding: 0;
+}
+.card-bottom-info {
+    display: inline-block;
+    width: 27%;
+    padding: 24px calc(19% / 6);
+}
+div.card-top img {
+    width: 100px;
+    position: relative;
+    top: calc(140px - 50px);
+    left: calc(175px - 50px);
+    border: 3px solid var(--White);
+    border-radius: 50%;
+}
+div.name {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    margin: auto;
+}
+div.name h3 {
+    padding-bottom: 8px;
+}
+div.name span {
+    font-weight: 400;
+    color: var(--Dark-gray);
+    padding-left: 4px;
+}
+div.name p {
+    font-size: 14px;
+    color: var(--Dark-gray);
+}
+.number {
+    font-weight: 700;
+}
+.option {
+    font-size: 12px;
+    color: var(--Dark-gray);
+}
+
+.attribution {
+    font-size: 12px;
+    color: #000;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 4vh 0;
+}
+.attribution > p > a {
+    color: #000;
+}
+.attribution > p {
+    padding-bottom: 0;
+    margin-bottom: 5px;
+}
+
+@media only screen and (min-width: 768px) {
+    div.component {
+        background: url('https://supraweb.dev/demos/profile-card-component-main/images/bg-pattern-top.svg') left -250px top -500px, url('https://supraweb.dev/demos/profile-card-component-main/images/bg-pattern-bottom.svg') right -250px bottom -500px, var(--Dark-cyan);
+        background-repeat: no-repeat;
+    }
+}   
